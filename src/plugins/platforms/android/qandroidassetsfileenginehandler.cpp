@@ -280,7 +280,7 @@ void AndroidAssetsFileEngineHandler::prepopulateCache() const
     static qint64 maxPrepopulatedCacheSize = qMax(1024LL * 1024LL,
                                                   qgetenv("QT_ANDROID_MAX_PREPOPULATED_ASSETS_CACHE_SIZE").toLongLong());
 
-    const char *fileName = "--Added-by-androiddeployqt--/qt_cache_pregenerated_file_list";
+    const char *fileName = "qt-bundle/qt_cache_pregenerated_file_list";
     AAsset *asset = AAssetManager_open(m_assetManager, fileName, AASSET_MODE_BUFFER);
     if (asset) {
         m_hasPrepopulatedCache = true;
